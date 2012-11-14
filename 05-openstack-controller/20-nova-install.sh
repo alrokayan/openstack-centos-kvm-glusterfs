@@ -15,4 +15,4 @@
 # limitations under the License.
 
 # Install OpenStack Nova (compute service) and the Qpid AMQP message broker
-yum install openstack-nova* qpid-cpp-server
+yum install openstack-nova* qpid-cpp-server -y
