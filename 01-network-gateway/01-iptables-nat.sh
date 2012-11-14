@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Edited by Alrokayan November 2012
 
 # Flush the iptables rules. For production it is recommended to open
 # the specific required ports.
@@ -22,9 +23,9 @@ iptables -t nat -F
 iptables -t mangle -F
 
 # Set up packet forwarding for NAT
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-iptables -A FORWARD -i eth1 -j ACCEPT
-iptables -A FORWARD -o eth1 -j ACCEPT
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+iptables -A FORWARD -i eth0 -j ACCEPT
+iptables -A FORWARD -o eth0 -j ACCEPT
 
 # Save the iptables configuration into a file and restart iptables
 service iptables save
