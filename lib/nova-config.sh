@@ -41,6 +41,7 @@ openstack-config --set /etc/nova/nova.conf DEFAULT fixed_range 10.0.0.0/24
 openstack-config --set /etc/nova/nova.conf DEFAULT flat_interface eth0
 openstack-config --set /etc/nova/nova.conf DEFAULT flat_network_bridge br100
 openstack-config --set /etc/nova/nova.conf DEFAULT public_interface eth0
+openstack-config --set /etc/nova/nova.conf DEFAULT force_dhcp_release False
 
 # Set the Glance host name
 openstack-config --set /etc/nova/nova.conf DEFAULT glance_host controller
