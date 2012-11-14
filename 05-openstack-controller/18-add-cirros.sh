@@ -14,6 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Edited by Alrokayan November 2012
+
+# Install wget
+yum install wget -y
 
 # Download the Cirros VM image
 mkdir /tmp/images
