@@ -14,9 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Edited by Alrokayan November 2012
-# Moved from folder 02-glusterfs-all
-
 # Set SELinux into the permissive mode
 sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 echo 0 > /selinux/enforce
