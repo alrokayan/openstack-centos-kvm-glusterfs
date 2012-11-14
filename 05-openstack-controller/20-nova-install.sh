@@ -14,7 +14,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Edited by Alrokayan 14/Nov/2012: exclude openstack-nova-compute package 
-
 # Install OpenStack Nova (compute service) and the Qpid AMQP message broker
-yum -x openstack-nova-compute install openstack-nova* qpid-cpp-server
+yum install openstack-nova* qpid-cpp-server
