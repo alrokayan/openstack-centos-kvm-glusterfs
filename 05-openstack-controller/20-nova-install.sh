@@ -17,3 +17,4 @@
 
 # Install OpenStack Nova (compute service) and the Qpid AMQP message broker
 yum install -y openstack-nova* qpid-cpp-server
+# I do not need penstack-nova-compute in the controller

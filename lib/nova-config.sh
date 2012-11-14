@@ -36,11 +36,14 @@ openstack-config --set /etc/nova/api-paste.ini filter:authtoken admin_password $
 openstack-config --set /etc/nova/api-paste.ini filter:authtoken auth_uri $NOVA_OS_AUTH_URL
 
 # Set the network configuration
-openstack-config --set /etc/nova/nova.conf DEFAULT network_host compute1
+#openstack-config --set /etc/nova/nova.conf DEFAULT network_host compute1
+openstack-config --set /etc/nova/nova.conf DEFAULT network_host controller
 openstack-config --set /etc/nova/nova.conf DEFAULT fixed_range 10.0.0.0/24
-openstack-config --set /etc/nova/nova.conf DEFAULT flat_interface eth1
+#openstack-config --set /etc/nova/nova.conf DEFAULT flat_interface eth1
+openstack-config --set /etc/nova/nova.conf DEFAULT flat_interface eth0
 openstack-config --set /etc/nova/nova.conf DEFAULT flat_network_bridge br100
-openstack-config --set /etc/nova/nova.conf DEFAULT public_interface eth1
+#openstack-config --set /etc/nova/nova.conf DEFAULT public_interface eth1
+openstack-config --set /etc/nova/nova.conf DEFAULT public_interface eth0
 
 # Set the Glance host name
 openstack-config --set /etc/nova/nova.conf DEFAULT glance_host controller
