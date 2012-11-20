@@ -15,7 +15,7 @@
 # limitations under the License.
 
 #Same current location
-current_location = `pwd`
+current_location=`pwd`
 
 # Download an Ubuntu Cloud image
 mkdir /tmp/images

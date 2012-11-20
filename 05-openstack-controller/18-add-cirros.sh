@@ -17,7 +17,7 @@
 # Edited by Alrokayan November 2012
 
 #Same current location
-current_location = `pwd`
+current_location=`pwd`
 
 # Install wget
 yum install wget -y
