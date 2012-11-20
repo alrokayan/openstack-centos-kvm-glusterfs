@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # Change Log:
-# - Change: Added sql_connection to glance-api.conf, required in Folsom.
+# - Change: Added sql_connection to glance-api.conf, required in Folsom (http://wiki.openstack.org/ReleaseNotes/Folsom).
 #	By: Mohammed Alrokayan
 #	Data: 20/11/2012
 

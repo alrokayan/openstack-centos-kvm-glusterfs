@@ -14,7 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Edited by Alrokayan November 2012
+# Change Log:
+# - Change: Return to user location after adding the image.
+#	By: Mohammed Alrokayan
+#	Data: 20/11/2012
 
 #Same current location
 current_location=`pwd`
