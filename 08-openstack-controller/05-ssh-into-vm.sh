@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright 2012 Anton Beloglazov
+# Copyright 2012 Mohammed Alrokayan
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +13,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# Change Log:
-# - Change: Replaced "exit 1" with user input.
-#	By: Mohammed Alrokayan
-#	Data: 20/11/2012
 
 
 # SSH into a VM instance using the generated test.pem key.
@@ -32,9 +27,9 @@ else
 	# show VMs
 	nova list
     echo ''
-    read -p 'From the above VMs what is the IP address of the MASTER node? ' master_node
+    read -p 'From the above VMs, what is the IP address of the VM? ' VM_IP
     
     read -p 'Username: ' VM_username
     
-    ssh -i ../config/test.pem -l $VM_username $master_node
+    ssh -i ../config/test.pem -l $VM_username $VM_IP
 fi
