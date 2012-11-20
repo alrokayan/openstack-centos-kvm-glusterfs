@@ -14,6 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Change Log:
+# - Change: Added sql_connection to glance-api.conf, required in Folsom.
+#	By: Mohammed Alrokayan
+#	Data: 20/11/2012
 
 # Make Glance API use Keystone as the identity management service
 openstack-config --set /etc/glance/glance-api.conf paste_deploy flavor keystone
@@ -33,6 +37,9 @@ openstack-config --set /etc/glance/glance-registry.conf paste_deploy flavor keys
 
 # Set the connection to the MySQL server
 openstack-config --set /etc/glance/glance-registry.conf DEFAULT sql_connection mysql://glance:$GLANCE_MYSQL_PASSWORD@controller/glance
+
+#New in Folsom
+openstack-config --set /etc/glance/glance-api.conf DEFAULT sql_connection mysql://glance:$GLANCE_MYSQL_PASSWORD@controller/glance
 
 # Set Glance Registry user credentials
 openstack-config --set /etc/glance/glance-registry-paste.ini filter:authtoken admin_tenant_name $GLANCE_SERVICE_TENANT

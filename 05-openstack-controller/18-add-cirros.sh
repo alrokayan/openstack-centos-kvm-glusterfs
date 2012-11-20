@@ -16,6 +16,9 @@
 
 # Edited by Alrokayan November 2012
 
+#Same current location
+current_location = `pwd`
+
 # Install wget
 yum install wget -y
 
@@ -29,3 +32,6 @@ glance add name="cirros-0.3.0-x86_64" is_public=true disk_format=qcow2 container
 
 # Remove the temporary directory
 rm -rf /tmp/images
+
+#Go back
+cd $current_location

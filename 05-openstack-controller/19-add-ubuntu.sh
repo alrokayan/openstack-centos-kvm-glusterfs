@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#Same current location
+current_location = `pwd`
 
 # Download an Ubuntu Cloud image
 mkdir /tmp/images
@@ -25,3 +27,6 @@ glance add name="ubuntu" is_public=true disk_format=qcow2 container_format=bare 
 
 # Remove the temporary directory
 rm -rf /tmp/images
+
+#Go back
+cd $current_location
